@@ -2,6 +2,10 @@ import React from "react";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
+
+  let [select, category] = useState(items)
+
+  
   return (
     <div className="ShoppingList">
       <div className="Filter">
