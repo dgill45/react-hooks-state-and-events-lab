@@ -6,13 +6,12 @@ function App() {
   
   // this data will be passed down to the ShoppingList as a prop
   const [items, setItems] = useState(itemData);
-  let [isDark, toggleDark] = useState(false);
+  let [isDark, setToDark] = useState(false);
 
   function toggleDark(){
-      toggleDark((isDark) => {
-        !isDark
-      })
-  }
+      setToDark((isDark) => !isDark);
+      }
+  
 
   return (
     <div className={"App " + (isDark ? "dark" : "light")}>
